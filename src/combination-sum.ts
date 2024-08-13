@@ -1,6 +1,6 @@
 function combinationSum2(candidates: number[], target: number): number[][] {
   const results: number[][] = [];
-  candidates.sort((a, b) => a - b); // Sort the candidates to handle duplicates easily
+  candidates.sort((a, b) => a - b); // Sort the candidates to handle duplicates easily (ascending)
 
   function backtrack(
     start: number,
@@ -40,7 +40,3 @@ const candidates2 = [2, 5, 2, 1, 2];
 const target2 = 5;
 console.log(combinationSum2(candidates2, target2));
 // Output: [[1, 2, 2], [5]]
-
-// candidates3.sort((a, b) => a - b);
-// candidates3.sort();
-// console.log(candidates3);
