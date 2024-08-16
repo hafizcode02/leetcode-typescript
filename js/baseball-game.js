@@ -18,5 +18,5 @@ const calPoints = (ops) => {
     return sum;
 }
 
-let ops = ["5","2","C","D","+"];
+let ops = ["5", "2", "C", "D", "+"];
 console.log(calPoints(ops)); // 30
