@@ -1,4 +1,4 @@
-# leet-code-sealabs
+# training-leetcode
 
 To install dependencies:
 
