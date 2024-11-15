@@ -7,6 +7,7 @@
     "moduleDetection": "force",
     "jsx": "react-jsx",
     "allowJs": true,
+    "types": ["node", "ws"],
 
     // Bundler mode
     "moduleResolution": "bundler",
