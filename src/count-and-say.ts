@@ -37,37 +37,20 @@
 */
 
 function countAndSay(n: number): string {
-  if (n === 1) {
-    return "1";
-  }
-
-  let result = "1";
-
-  for (let i = 2; i <= n; i++) {
-    result = nextSequence(result);
-  }
-
-  return result;
-}
-
-function nextSequence(s: string): string {
+  if (n === 1) return '1';
+  let prev = countAndSay(n - 1);
+  let result = '';
   let count = 1;
-  let result = "";
-
-  for (let i = 1; i < s.length; i++) {
-    if (s[i] === s[i - 1]) {
-      count++;
-    } else {
-      result += count.toString() + s[i - 1];
-      count = 1;
-    }
+  for (let i = 0; i < prev.length; i++) {
+      if (prev[i] === prev[i + 1]) {
+          count++;
+      } else {
+          result += count + prev[i];
+          count = 1;
+      }
   }
-
-  // Append the last group
-  result += count.toString() + s[s.length - 1];
-
   return result;
-}
+};
 
 // Example usage:
 console.log(countAndSay(5)); // Output: "1211"
